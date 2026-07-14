@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     private SpeechBubbleUI activeBubble;
     private string currLine;
     private bool isTyping = false;
-
+    private DialogueTrigger nearbyTrigger; //npc terdekat yg bakalan diisi sama regTrigger
 
     public bool IsDialogueActive { get; private set; }
 
@@ -28,11 +28,21 @@ public class DialogueManager : MonoBehaviour
         input.OnInteractPressed -= HandleInteract;
     }
 
+    public void RegTrigger(DialogueTrigger trigger)
+    {
+        nearbyTrigger = trigger;
+    }
+
+    public void UnregTrigger(DialogueTrigger trigger)
+    {
+        if (trigger == nearbyTrigger) nearbyTrigger = null;
+    }
+
     private void HandleInteract()
     {
         if (!IsDialogueActive)
         {
-            return;
+            if (nearbyTrigger != null) SetupDialogue(nearbyTrigger.Bubble, nearbyTrigger.Text);
         } else
         {
             if (isTyping)
@@ -46,7 +56,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     //case baru mulai dialog
-    public void SetupDialogue(SpeechBubbleUI bubble, TextAsset inkJson)
+    private void SetupDialogue(SpeechBubbleUI bubble, TextAsset inkJson)
     {
         story = new Story(inkJson.text);
         IsDialogueActive = true;

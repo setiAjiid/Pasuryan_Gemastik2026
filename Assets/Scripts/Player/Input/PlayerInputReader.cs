@@ -6,6 +6,8 @@ public class PlayerInputReader : MonoBehaviour
     public Vector2 MoveInput { get; private set; }
     public bool IsRun { get; private set; }
 
+    public event System.Action OnInteractPressed;
+
     private InputSystem_Actions controls;
 
 
@@ -21,6 +23,7 @@ public class PlayerInputReader : MonoBehaviour
         controls.Player.Move.canceled += OnMove;
         controls.Player.Sprint.performed += OnRun;
         controls.Player.Sprint.canceled += OnRun;
+        controls.Player.Interact.performed += OnInteract;
     }
 
     private void OnDisable()
@@ -29,6 +32,7 @@ public class PlayerInputReader : MonoBehaviour
         controls.Player.Move.canceled -= OnMove;
         controls.Player.Sprint.performed -= OnRun;
         controls.Player.Sprint.canceled -= OnRun;
+        controls.Player.Interact.performed -= OnInteract;
         controls.Player.Disable();
     }
 
@@ -40,5 +44,24 @@ public class PlayerInputReader : MonoBehaviour
     private void OnRun(InputAction.CallbackContext ctx)
     {
         IsRun = ctx.performed;
+    }
+
+    private void OnInteract(InputAction.CallbackContext ctx)
+    {
+        OnInteractPressed?.Invoke();
+    }
+
+    public void DisableMove()
+    {
+        controls.Player.Move.Disable();
+        controls.Player.Sprint.Disable();
+        MoveInput = Vector2.zero;
+        IsRun = false;
+    }
+
+    public void EnableMove()
+    {
+        controls.Player.Move.Enable();
+        controls.Player.Sprint.Enable();
     }
 }

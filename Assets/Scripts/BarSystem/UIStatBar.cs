@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class UIStatBar : MonoBehaviour
 {
     //main task: update visual UI bar atas perubahan dari BatinState class
-    [SerializeField] private BatinStat statType;
+    [SerializeField] private BatinStat statType; //per bar dikasih identifier
     [SerializeField] private BatinState batin;
     [SerializeField] private Image fillImg;
     private void OnEnable()
@@ -27,7 +27,7 @@ public class UIStatBar : MonoBehaviour
 
     private void HandleVisualBar(BatinStat changedStat, int newVal)
     {
-        //just nyocokin antara type stat yg mo diubah dengan tipe stat asli dari batin 
+        //just nyocokin antara type stat yg mo diubah dengan tipe stat asli dari suatu bar batin 
         if (changedStat == statType)
         {
             UpdateVisualBar(newVal); 

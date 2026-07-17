@@ -22,6 +22,7 @@ public class BatinState : MonoBehaviour
     public int MHVal => mhVal;
     public int EnergyVal => energyVal;
     public int TensiVal => tensiVal;
+    public int MaxVal => maxVal;
 
     public event Action<BatinStat, int> OnChangedBar;
     public event Action OnTensiMax;

@@ -9,6 +9,7 @@ public class IdleState : IState
     }
     public void Enter()
     {
+        ctx.Animator.SetInteger("AnimState", 0);
     }
 
     public void Exit()
@@ -23,13 +24,7 @@ public class IdleState : IState
     {
         if (Mathf.Abs(ctx.Input.MoveInput.x) > 0.01f)
         {
-            if (ctx.Input.IsRun)
-            {
-                ctx.StateMachine.ChangeState(ctx.RunState);
-            } else
-            {
-                ctx.StateMachine.ChangeState(ctx.WalkState);
-            }
+            ctx.StateMachine.ChangeState(ctx.HandOutState);
         }
     }
 

@@ -5,6 +5,8 @@ public class PlayerStateMachine : MonoBehaviour
 {
     [SerializeField] private float walkSpeed = 3f;
     [SerializeField] private float runSpeed = 5f;
+    [SerializeField] private float handOutTime = 0.12f;
+    [SerializeField] private float handInTime = 0.2f;
 
     private readonly PlayerStateContext ctx = new();
     private StateMachine stateMachine;
@@ -13,6 +15,9 @@ public class PlayerStateMachine : MonoBehaviour
     {
         stateMachine = new StateMachine();
 
+        ctx.Animator = GetComponentInChildren<Animator>();
+        ctx.HandOutTime = handOutTime;
+        ctx.HandInTime = handInTime;
         ctx.StateMachine = stateMachine;
         ctx.WalkSpeed = walkSpeed;
         ctx.RunSpeed = runSpeed;
@@ -21,6 +26,9 @@ public class PlayerStateMachine : MonoBehaviour
         ctx.IdleState = new(ctx);
         ctx.WalkState = new(ctx);
         ctx.RunState = new(ctx);
+        ctx.HandInState = new(ctx);
+        ctx.HandOutState = new(ctx);
+
 
     }
 

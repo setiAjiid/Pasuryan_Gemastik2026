@@ -10,6 +10,7 @@ public class WalkState : IState
 
     public void Enter()
     {
+        ctx.Animator.SetInteger("AnimState", 1);
     }
 
     public void Exit()
@@ -25,7 +26,7 @@ public class WalkState : IState
     {
         if (Mathf.Abs(ctx.Input.MoveInput.x) < 0.01f)
         {
-            ctx.StateMachine.ChangeState(ctx.IdleState);
+            ctx.StateMachine.ChangeState(ctx.HandInState);
         } else if (ctx.Input.IsRun) 
         {
             ctx.StateMachine.ChangeState(ctx.RunState);

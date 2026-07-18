@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
     //main task: start dialogue, typing, instant finish typing
     [SerializeField] private PlayerInputReader input;
     [SerializeField] private float typeSpeed = 0.03f;
+    [SerializeField] private BatinState batin;
 
     private Story story;
     private Coroutine typCoroutine;
@@ -67,13 +68,27 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayLine()
     {
-        if (story.canContinue)
+        while (story.canContinue) //why while? not if? cz buat handle klo isinya "line" cuman tags doang, tanpa teks
         {
-            currLine = story.Continue().Trim();
-            typCoroutine = StartCoroutine(Typing(currLine));
-        } else
+            string text = story.Continue().Trim();
+            DialogueLine line = TagParser.Parse(text, story.currentTags); //jadiin line bersih, textnya sendiri, tagsnya sendiri
+            ApplyTags(line); //apply efek samping
+            
+            if (!line.IsTagOnly)
+            {
+                currLine = line.Text;
+                typCoroutine = StartCoroutine(Typing(currLine));
+                return;
+            } 
+        }
+        EndDialogue();
+    }
+
+    private void ApplyTags(DialogueLine line)
+    {
+        if (line.HasResource)
         {
-            EndDialogue();
+            batin.CalcStat(line.MHDelta, line.EnergyDelta, line.TensiDelta);
         }
     }
 

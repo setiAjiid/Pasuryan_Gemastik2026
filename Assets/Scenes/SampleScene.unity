@@ -2228,6 +2228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 483720550}
   typeSpeed: 0.03
+  batin: {fileID: 1716777684}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

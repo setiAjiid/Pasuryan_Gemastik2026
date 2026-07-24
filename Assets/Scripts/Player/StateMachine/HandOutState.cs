@@ -11,8 +11,10 @@ public class HandOutState : IState
     }
     public void Enter()
     {
-        timer = 0;
+        //main task: lanjut dari kondisi tgn sekarang
+        timer = ctx.HandProgress * ctx.HandOutTime;
         ctx.Animator.SetInteger("AnimState", 2);
+        ctx.Animator.Play("HandOut", 0, ctx.HandProgress);
         ctx.Movement.Face(ctx.Input.MoveInput.x); //hadap arah jln tnpa gerak
     }
 
@@ -27,13 +29,14 @@ public class HandOutState : IState
 
     public void OnUpdate()
     {
-        if (Mathf.Abs(ctx.Input.MoveInput.x) < 0.01f)
+        timer += Time.deltaTime;
+        ctx.HandProgress = Mathf.Clamp01(timer / ctx.HandOutTime);
+        if (Mathf.Abs(ctx.Input.MoveInput.x) < 0.01f) //klo berhenti
         {
-            ctx.StateMachine.ChangeState(ctx.IdleState);
+            ctx.StateMachine.ChangeState(ctx.HandInState);
             return;
         }
 
-        timer += Time.deltaTime;
         if (timer >= ctx.HandOutTime)
         {
             if (ctx.Input.IsRun)

@@ -14,6 +14,7 @@ public class PlayerStateContext
     //durasi
     public float HandOutTime;
     public float HandInTime;
+    public float HandProgress;
     
     //state
     public IdleState IdleState;

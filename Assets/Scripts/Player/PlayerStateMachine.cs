@@ -5,8 +5,8 @@ public class PlayerStateMachine : MonoBehaviour
 {
     [SerializeField] private float walkSpeed = 3f;
     [SerializeField] private float runSpeed = 5f;
-    [SerializeField] private float handOutTime = 0.12f;
-    [SerializeField] private float handInTime = 0.2f;
+    [SerializeField] private float handOutTime = 1f;
+    [SerializeField] private float handInTime = 1.050f;
 
     private readonly PlayerStateContext ctx = new();
     private StateMachine stateMachine;

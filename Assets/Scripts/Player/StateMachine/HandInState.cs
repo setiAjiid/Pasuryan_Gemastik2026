@@ -11,8 +11,10 @@ public class HandInState : IState
     }
     public void Enter()
     {
-        timer = 0f;
+        //main task: sisa waktu cmn sebnyak tangan yg udah keluar sekarang
+        timer = (1f - ctx.HandProgress) * ctx.HandInTime; 
         ctx.Animator.SetInteger("AnimState", 3);
+        ctx.Animator.Play("HandIn", 0, 1f - ctx.HandProgress);
     }
 
     public void Exit()
@@ -26,13 +28,14 @@ public class HandInState : IState
 
     public void OnUpdate()
     {
+        timer += Time.deltaTime;
+        ctx.HandProgress = 1f - Mathf.Clamp01(timer / ctx.HandInTime);
         if (Mathf.Abs(ctx.Input.MoveInput.x) > 0.01f)
         {
             ctx.StateMachine.ChangeState(ctx.HandOutState);
             return;
         }
 
-        timer += Time.deltaTime;
         if (timer >= ctx.HandInTime)
         {
             ctx.StateMachine.ChangeState(ctx.IdleState);

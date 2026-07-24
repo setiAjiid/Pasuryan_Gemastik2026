@@ -11,8 +11,14 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Move(float dirX, float speed)
     {
-        Vector2 tar = rb.position + new Vector2(dirX, 0f) * (speed * Time.fixedDeltaTime);
-        rb.MovePosition(tar);
+        //Vector2 tar = rb.position + new Vector2(dirX, 0f) * (speed * Time.fixedDeltaTime);
+        //rb.MovePosition(tar);
+        rb.linearVelocity = new Vector2(dirX * speed, 0f);
+    }
+
+    public void Stop()
+    {
+        rb.linearVelocity = Vector2.zero;
     }
 
     public void Face(float dirX)

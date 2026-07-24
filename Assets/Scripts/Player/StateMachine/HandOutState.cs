@@ -22,6 +22,7 @@ public class HandOutState : IState
 
     public void OnFixedUpdate()
     {
+        ctx.Movement.Stop();
     }
 
     public void OnUpdate()

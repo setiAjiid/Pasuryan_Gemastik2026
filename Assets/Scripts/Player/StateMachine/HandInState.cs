@@ -21,6 +21,7 @@ public class HandInState : IState
 
     public void OnFixedUpdate()
     {
+        ctx.Movement.Stop();
     }
 
     public void OnUpdate()

@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 26de1ea6dd34c274ab63ab36103b0d43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -799893365885737708
+    second: 1. KAMAR SURYA - ASP_0
+  - first:
+      213: -6893285468768096765
+    second: 1. KAMAR SURYA - ASP_1
+  - first:
+      213: -1570346751270559027
+    second: 1. KAMAR SURYA - ASP_2
+  - first:
+      213: 1854385997018075481
+    second: 1. KAMAR SURYA - ASP_3
+  - first:
+      213: 1437877755582505115
+    second: 1. KAMAR SURYA - ASP_4
+  - first:
+      213: 1935908761402991734
+    second: 1. KAMAR SURYA - ASP_5
+  - first:
+      213: -2608679215553461783
+    second: 1. KAMAR SURYA - ASP_6
+  - first:
+      213: 3227576884259758918
+    second: 1. KAMAR SURYA - ASP_7
+  - first:
+      213: -4523824197930040907
+    second: 1. KAMAR SURYA - ASP_8
+  - first:
+      213: 3135108391093359090
+    second: 1. KAMAR SURYA - ASP_9
+  - first:
+      213: 5503247998634002382
+    second: 1. KAMAR SURYA - ASP_10
+  - first:
+      213: -6626439246687697810
+    second: 1. KAMAR SURYA - ASP_11
+  - first:
+      213: -3250698413495692121
+    second: 1. KAMAR SURYA - ASP_12
+  - first:
+      213: 8766338631036907134
+    second: 1. KAMAR SURYA - ASP_13
+  - first:
+      213: 6729984905865892916
+    second: 1. KAMAR SURYA - ASP_14
+  - first:
+      213: 6900165517485420880
+    second: 1. KAMAR SURYA - ASP_15
+  - first:
+      213: 4998422775182398297
+    second: 1. KAMAR SURYA - ASP_16
+  - first:
+      213: -8498654115743229702
+    second: 1. KAMAR SURYA - ASP_17
+  - first:
+      213: -2032639576469216943
+    second: 1. KAMAR SURYA - ASP_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LantaiKSurya
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 495
+        width: 479
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4156034c83536e4f0800000000000000
+      internalID: -799893365885737708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TembokKSurya
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 333
+        width: 418
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e27ba63612650a0800000000000000
+      internalID: -6893285468768096765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtapKSurya
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 413
+        width: 481
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2645423f1053ae0800000000000000
+      internalID: -1570346751270559027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LampKamar
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 365
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95198b44d3a1cb910800000000000000
+      internalID: 1854385997018075481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindowKamar
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 292
+        width: 118
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b906ee3533e54f310800000000000000
+      internalID: 1437877755582505115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LemariKamar
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 223
+        width: 77
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674edf8f2cabdda10800000000000000
+      internalID: 1935908761402991734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RakBuku
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 293
+        width: 98
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1cdf7231c1ccbd0800000000000000
+      internalID: -2608679215553461783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PosterKucing
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 284
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643a0976318aacc20800000000000000
+      internalID: 3227576884259758918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PintuKamar
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 209
+        width: 21
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b140183cd52831c0800000000000000
+      internalID: -4523824197930040907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TembokKiri
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 48
+        width: 34
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1577f9874228b20800000000000000
+      internalID: 3135108391093359090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TembokKanan
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 48
+        width: 34
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec78575b5e67f5c40800000000000000
+      internalID: 5503247998634002382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BedKSurya
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 213
+        width: 183
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64097f0d982a04a0800000000000000
+      internalID: -6626439246687697810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MejaBelajarSurya
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 197
+        width: 101
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4d9af040333e2d0800000000000000
+      internalID: -3250698413495692121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GetOutRoom
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 179
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e2db3f98a48a970800000000000000
+      internalID: 8766338631036907134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kursi
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 125
+        width: 34
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43490e96d95b56d50800000000000000
+      internalID: 6729984905865892916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LampuBelajar
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 125
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0513e11caff42cf50800000000000000
+      internalID: 6900165517485420880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconJournalling
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 147
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95318fff707fd5540800000000000000
+      internalID: 4998422775182398297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CetekanLampu
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 144
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8963a0c17be0a80800000000000000
+      internalID: -8498654115743229702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buku
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 125
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151e628131d9ac3e0800000000000000
+      internalID: -2032639576469216943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a1d67b608eb43e14d85c46a425823c62
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AtapKSurya: -1570346751270559027
+      BedKSurya: -6626439246687697810
+      Buku: -2032639576469216943
+      CetekanLampu: -8498654115743229702
+      GetOutRoom: 8766338631036907134
+      IconJournalling: 4998422775182398297
+      Kursi: 6729984905865892916
+      LampKamar: 1854385997018075481
+      LampuBelajar: 6900165517485420880
+      LantaiKSurya: -799893365885737708
+      LemariKamar: 1935908761402991734
+      MejaBelajarSurya: -3250698413495692121
+      PintuKamar: -4523824197930040907
+      PosterKucing: 3227576884259758918
+      RakBuku: -2608679215553461783
+      TembokKSurya: -6893285468768096765
+      TembokKanan: 5503247998634002382
+      TembokKiri: 3135108391093359090
+      WindowKamar: 1437877755582505115
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

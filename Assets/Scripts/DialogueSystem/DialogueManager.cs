@@ -2,10 +2,11 @@ using UnityEngine;
 using Ink.Runtime;
 using System.Collections;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager : MonoBehaviour, IInteractionSession
 {
     //main task: start dialogue, typing, instant finish typing
     [SerializeField] private PlayerInputReader input;
+    [SerializeField] private PlayerInteractor interactor;
     [SerializeField] private float typeSpeed = 0.03f;
     [SerializeField] private BatinState batin;
 
@@ -14,55 +15,25 @@ public class DialogueManager : MonoBehaviour
     private SpeechBubbleUI activeBubble;
     private string currLine;
     private bool isTyping = false;
-    private DialogueTrigger nearbyTrigger; //npc terdekat yg bakalan diisi sama regTrigger
 
     public bool IsDialogueActive { get; private set; }
 
-    //cek dialog cases in handleinteract (which is dialog ga active aka baru pertama kali, atau dialog sudah active dengan kondisi masih typing atau ngga typing)
-    private void OnEnable()
+    //dicall PlayerInteractor tiep E dipencet slama sesi ini aktif
+    public void OnContinue()
     {
-        input.OnInteractPressed += HandleInteract;
+        if (isTyping) InstantFinishTyp();
+        else DisplayLine();
     }
 
-    private void OnDisable()
+    //case baru mulai dialog, dicall dr DialogueTrigger.Interact()
+    public void StartDialogue(SpeechBubbleUI bubble, TextAsset inkJson)
     {
-        input.OnInteractPressed -= HandleInteract;
-    }
-
-    public void RegTrigger(DialogueTrigger trigger)
-    {
-        nearbyTrigger = trigger;
-    }
-
-    public void UnregTrigger(DialogueTrigger trigger)
-    {
-        if (trigger == nearbyTrigger) nearbyTrigger = null;
-    }
-
-    private void HandleInteract()
-    {
-        if (!IsDialogueActive)
-        {
-            if (nearbyTrigger != null) SetupDialogue(nearbyTrigger.Bubble, nearbyTrigger.Text);
-        } else
-        {
-            if (isTyping)
-            {
-                InstantFinishTyp();
-            } else
-            {
-                DisplayLine();
-            }
-        }
-    }
-
-    //case baru mulai dialog
-    private void SetupDialogue(SpeechBubbleUI bubble, TextAsset inkJson)
-    {
+        if (IsDialogueActive) return;
         story = new Story(inkJson.text);
         IsDialogueActive = true;
         activeBubble = bubble;
         input.DisableMove();
+        interactor.BeginSession(this);
         DisplayLine();
     }
 
@@ -117,6 +88,7 @@ public class DialogueManager : MonoBehaviour
         IsDialogueActive = false;
         activeBubble.Hide();
         activeBubble = null;
+        interactor.EndSession(this);
         input.EnableMove();
     }
 

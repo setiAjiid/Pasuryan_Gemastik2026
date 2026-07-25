@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger : InteractableBase
 {
     //main task: cek syarat pra-dialog sebelum ke dialogue manager
     //trigger saat apa? collision terjadi
-    //npc pasif cuman ngasih data dan lapor jarak
+    //npc pasif cuman ngasih data dan laporin jarak ke PlayerInteractor, sediain data dialog
 
     [SerializeField] private SpeechBubbleUI bubble;
     [SerializeField] private TextAsset text;
@@ -12,21 +12,10 @@ public class DialogueTrigger : MonoBehaviour
 
     public SpeechBubbleUI Bubble => bubble;
     public TextAsset Text => text;
+    public override bool CanInteract => !dialogueManager.IsDialogueActive; //slama dialog g aktif bisa diinteract
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public override void Interact()
     {
-        if (collision.CompareTag("Player"))
-        {
-            dialogueManager.RegTrigger(this);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            dialogueManager.UnregTrigger(this);
-        }
+        dialogueManager.StartDialogue(bubble, text);
     }
 }

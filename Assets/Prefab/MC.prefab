@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6201656911656719686}
   - component: {fileID: 5364554439140117744}
   - component: {fileID: 2937145112126515857}
+  - component: {fileID: 3302919909530697829}
+  - component: {fileID: 976263663477178019}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -110,6 +112,153 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3302919909530697829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389316853836774950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0
+  m_ApplyToSortingLayers: 0000000021b50295fda543d8
+  m_ShapePath:
+  - {x: -0.37999988, y: -0.84000003, z: 0}
+  - {x: -0.37999988, y: 0.7, z: 0}
+  - {x: 0.35000014, y: 0.7, z: 0}
+  - {x: 0.35000014, y: -0.84000003, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 976263663477178019}
+  m_ShadowShape2DProvider:
+    rid: 8381705227150819683
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: -0.013771057, y: -0.051071167, z: 0}
+      m_Extent: {x: 0.18248749, y: 0.73394775, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.03
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 2
+  m_PreviousTrimEdge: 0.03
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 976263663477178019}
+  references:
+    version: 2
+    RefIds:
+    - rid: 8381705227150819683
+      type: {class: ShadowShape2DProvider_Collider2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
+--- !u!60 &976263663477178019
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389316853836774950}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5205479, y: 0.54545456}
+    oldSize: {x: 0.73, y: 1.54}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.02, y: -0.78999996}
+      - {x: 0.16354176, y: -0.7823472}
+      - {x: 0.17753148, y: -0.68035257}
+      - {x: 0.16950679, y: -0.567871}
+      - {x: 0.16949205, y: -0.4264314}
+      - {x: 0.17999999, y: -0.28}
+      - {x: 0.25, y: -0.32999998}
+      - {x: 0.34, y: -0.32999998}
+      - {x: 0.19315705, y: -0.24509948}
+      - {x: 0.19249701, y: -0.05874285}
+      - {x: 0.21597052, y: -0.014143527}
+      - {x: 0.19835934, y: -0.034900855}
+      - {x: 0.19380665, y: 0.000117242336}
+      - {x: 0.15708065, y: 0.19354036}
+      - {x: 0.13095637, y: 0.27118012}
+      - {x: 0.011664286, y: 0.36373532}
+      - {x: 0.09969132, y: 0.48377487}
+      - {x: 0.13754812, y: 0.6368913}
+      - {x: 0.10136898, y: 0.70901746}
+      - {x: -0.029358625, y: 0.7130905}
+      - {x: -0.14584391, y: 0.6557863}
+      - {x: -0.16946888, y: 0.5698541}
+      - {x: -0.11183095, y: 0.4848831}
+      - {x: -0.07937884, y: 0.32799986}
+      - {x: -0.13986586, y: 0.33682486}
+      - {x: -0.18365212, y: 0.28494406}
+      - {x: -0.1891222, y: 0.14601427}
+      - {x: -0.1996367, y: 0.07420842}
+      - {x: -0.21044093, y: 0.065194264}
+      - {x: -0.22630835, y: -0.11302671}
+      - {x: -0.22431481, y: -0.17586736}
+      - {x: -0.22114325, y: -0.22126493}
+      - {x: -0.2017653, y: -0.23209146}
+      - {x: -0.21315873, y: -0.26352012}
+      - {x: -0.20565629, y: -0.3049247}
+      - {x: -0.19186616, y: -0.31811735}
+      - {x: -0.20763591, y: -0.3478231}
+      - {x: -0.1930823, y: -0.37434036}
+      - {x: -0.19048046, y: -0.5794234}
+      - {x: -0.22508603, y: -0.74218005}
+      - {x: -0.19565949, y: -0.80497736}
+      - {x: -0.18917847, y: -0.7981255}
+      - {x: -0.17999999, y: -0.81}
+      - {x: -0.07688202, y: -0.8173117}
+      - {x: -0.08, y: -0.74}
+      - {x: -0.040250823, y: -0.7096769}
+      - {x: -0.01, y: -0.72999996}
+  m_UseDelaunayMesh: 0
 --- !u!1 &4181888859194351493
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +273,7 @@ GameObject:
   - component: {fileID: 2911924449368923845}
   - component: {fileID: 1623220216616946819}
   - component: {fileID: 3637152364725583026}
+  - component: {fileID: 3344160098369317022}
   m_Layer: 0
   m_Name: MC
   m_TagString: Player
@@ -161,7 +311,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -170,10 +320,10 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!70 &8211992848389305544
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -209,7 +359,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.68, y: 1.79}
   m_Direction: 0
 --- !u!114 &2911924449368923845
 MonoBehaviour:
@@ -247,7 +397,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d9c8acda4324a4ebac3a5cd1119267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
+  walkSpeed: 2
   runSpeed: 5
   handOutTime: 1
   handInTime: 1
+--- !u!114 &3344160098369317022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4181888859194351493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47dae1b26334aa44fa77b43752ad8cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 0}
+  promptIcon: {fileID: 0}

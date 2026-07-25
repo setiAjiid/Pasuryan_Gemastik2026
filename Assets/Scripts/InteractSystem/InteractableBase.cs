@@ -10,6 +10,12 @@ public abstract class InteractableBase : MonoBehaviour, IInteractable
     public GameObject PromptIcon => promptIcon;
 
     public abstract void Interact();
+
+    protected virtual void Awake()
+    {
+        if (promptIcon != null) promptIcon.SetActive(false);
+    }
+
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

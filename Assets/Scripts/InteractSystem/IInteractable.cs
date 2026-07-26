@@ -7,6 +7,7 @@ public interface IInteractable
     bool CanInteract { get; }
     void Interact(); //act rinci yg terjadi klo interact
     GameObject PromptIcon { get; } //icon per obj
+    Vector3 Position { get; } //ngitung pos obj yg paling deket
 }
 
 public interface IInteractionSession

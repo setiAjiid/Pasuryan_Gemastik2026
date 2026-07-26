@@ -9,6 +9,7 @@ public abstract class InteractableBase : MonoBehaviour, IInteractable
 
     public virtual bool CanInteract => true; //override klo objek punya syarat sendiri
     public GameObject PromptIcon => promptIcon;
+    public Vector3 Position => transform.position;
 
     public abstract void Interact();
 

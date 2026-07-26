@@ -8,12 +8,17 @@ public class DialogueTrigger : InteractableBase
 
     [SerializeField] private SpeechBubbleUI bubble;
     [SerializeField] private TextAsset text;
-    [SerializeField] private DialogueManager dialogueManager;
+    
+    private DialogueManager dialogueManager;
 
     public SpeechBubbleUI Bubble => bubble;
     public TextAsset Text => text;
-    public override bool CanInteract => !dialogueManager.IsDialogueActive; //slama dialog g aktif bisa diinteract
+    public override bool CanInteract => dialogueManager != null && !dialogueManager.IsDialogueActive; //slama dialog g aktif bisa diinteract
 
+    public void BindDialogue(DialogueManager tar)
+    {
+        dialogueManager = tar;
+    }
     public override void Interact()
     {
         dialogueManager.StartDialogue(bubble, text);

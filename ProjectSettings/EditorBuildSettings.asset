@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/KamarSurya.unity
+    guid: c482360e38029f34bb626e38c2abf761
+  - enabled: 1
+    path: Assets/Scenes/RuangTamuSurya.unity
+    guid: efe95059c909e6847b42c5d46ad4f54d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

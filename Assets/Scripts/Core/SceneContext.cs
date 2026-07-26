@@ -1,3 +1,4 @@
+using System;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class SceneContext : MonoBehaviour
 {
     //main task: nyamabungin isi scene ke subsitem abadi
     [SerializeField] private Collider2D cameraBounds;
+    [SerializeField] private SpawnPoint defaultSpawn; //dipk klo scene ini diplay langsung dari editor, bukn lewat pintu
 
     private void Awake()
     {
@@ -15,22 +17,21 @@ public class SceneContext : MonoBehaviour
             return;
         }
 
-        BindInteractables(root);
+        BindAll<InteractableBase>(tar => tar.Bind(root.Interactor));
+        BindAll<DialogueTrigger>(tar => tar.BindDialogue(root.Dialogue));
+        BindAll<DoorInteractable>(tar => tar.BindTransition(root.Transition));
+
         ApplyCameraBounds(root);
+        ApplyDefaultSpawn(root);
     }
 
-    private void BindInteractables(GameRoot root)
+    //kek template di c++, nyapu satu tipe obj di suatu scene ini doang, then jalanin aksi bindnya
+    private void BindAll<T>(Action<T> bind) where T: MonoBehaviour
     {
-        foreach (InteractableBase target in FindObjectsByType<InteractableBase>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        foreach (T target in FindObjectsByType<T>(FindObjectsInactive.Include, FindObjectsSortMode.None))
         {
             if (target.gameObject.scene != gameObject.scene) continue;
-            target.Bind(root.Interactor);
-        }
-
-        foreach (DialogueTrigger trigger in FindObjectsByType<DialogueTrigger>(FindObjectsInactive.Include, FindObjectsSortMode.None))
-        {
-            if (trigger.gameObject.scene != gameObject.scene) continue;
-            trigger.BindDialogue(root.Dialogue);
+            bind(target);
         }
     }
 
@@ -40,5 +41,12 @@ public class SceneContext : MonoBehaviour
         CinemachineConfiner2D confiner = root.Confiner;
         confiner.BoundingShape2D = cameraBounds;
         confiner.InvalidateBoundingShapeCache(); //confiner nyimpen cache lama, so perlu dibuang
+    }
+
+    private void ApplyDefaultSpawn(GameRoot root)
+    {
+        if (defaultSpawn == null) return;
+        if (root.Transition.IsBusy) return; //lagi transisi lewat pintu
+        root.Transition.PlaceAt(defaultSpawn);
     }
 }

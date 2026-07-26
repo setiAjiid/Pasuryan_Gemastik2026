@@ -321,11 +321,11 @@ Transform:
   m_GameObject: {fileID: 332037840}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.28, y: -1.02, z: -5.664749}
+  m_LocalPosition: {x: 1.5636798, y: -0.76879257, z: -0.015445232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1906928926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &689641566
 PrefabInstance:
@@ -346,6 +346,14 @@ PrefabInstance:
     - target: {fileID: 4137620757240663011, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
       propertyPath: interactor
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137620757240663011, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
+      propertyPath: targetScene
+      value: KamarSurya
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137620757240663011, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
+      propertyPath: targetSpawnId
+      value: dariRuangTamu
       objectReference: {fileID: 0}
     - target: {fileID: 8853627130795614262, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -393,9 +401,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8853627130795614262, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1110101813}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
+--- !u!4 &689641567 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8853627130795614262, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
+  m_PrefabInstance: {fileID: 689641566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1034571636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -518,6 +534,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 371b63c1c067c6d4ab249c5d175d9218, type: 3}
+--- !u!1 &1110101812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110101813}
+  - component: {fileID: 1110101814}
+  m_Layer: 0
+  m_Name: spawnDariRuangTamu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110101813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110101812}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.59, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 689641567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110101814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110101812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8473afdf7bccb748b7a8d50f59331c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnId: dariKamarSurya
 --- !u!1001 &1272616629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -617,6 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraBounds: {fileID: 332037841}
+  defaultSpawn: {fileID: 0}
 --- !u!4 &1906928926
 Transform:
   m_ObjectHideFlags: 0
@@ -629,7 +691,8 @@ Transform:
   m_LocalPosition: {x: -0.28367984, y: -0.2512074, z: -5.649304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 332037842}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1913553992
@@ -842,7 +905,6 @@ SceneRoots:
   - {fileID: 1913553992}
   - {fileID: 145308077}
   - {fileID: 1052880912}
-  - {fileID: 332037842}
   - {fileID: 1034571636}
   - {fileID: 7894115874577752170}
   - {fileID: 1272616629}

@@ -10,6 +10,7 @@ public class GameRoot : MonoBehaviour
     [SerializeField] private DialogueManager dialogue;
     [SerializeField] private Transform player;
     [SerializeField] private CinemachineConfiner2D confiner;
+    [SerializeField] private SceneTransitionManager transition;
 
     private static GameRoot instance;
     public static GameRoot Instance => instance;
@@ -18,6 +19,7 @@ public class GameRoot : MonoBehaviour
     public DialogueManager Dialogue => dialogue;
     public Transform Player => player;
     public CinemachineConfiner2D Confiner => confiner;
+    public SceneTransitionManager Transition => transition;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Bootstrap()

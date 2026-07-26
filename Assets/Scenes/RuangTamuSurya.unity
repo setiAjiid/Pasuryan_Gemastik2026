@@ -579,6 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnId: dariKamarSurya
+  facing: 1
 --- !u!1001 &1272616629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -678,7 +679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraBounds: {fileID: 332037841}
-  defaultSpawn: {fileID: 0}
+  floorY: -0.3139999
+  defaultSpawn: {fileID: 1110101814}
 --- !u!4 &1906928926
 Transform:
   m_ObjectHideFlags: 0

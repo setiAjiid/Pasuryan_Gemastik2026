@@ -11,6 +11,7 @@ public class SceneTransitionManager : MonoBehaviour
     [SerializeField] private Rigidbody2D playerBody;
     [SerializeField] private CinemachineCamera cam;
     [SerializeField] private CanvasGroup fade;
+    [SerializeField] private PlayerMovement playerMove;
 
     [Header("Tuning")]
     [SerializeField] private float fadeDuration = 0.35f;
@@ -28,12 +29,15 @@ public class SceneTransitionManager : MonoBehaviour
         StartCoroutine(Move(sceneName, spawnId));
     }
 
-    public void PlaceAt(SpawnPoint point)
+    public void PlaceAt(SpawnPoint point, float floorY)
     {
-        Vector3 dest = point.transform.position;
-        Vector3 delta = dest - playerBody.transform.position; //hitung jarak perpindahan
+        Vector3 now = playerBody.transform.position;
+        Vector3 dest = new(point.transform.position.x, floorY, now.z); //x dr spawn, y dr ruangan, z biarin
+        Vector3 delta = dest - now; //hitung jarak perpindahan
+
         playerBody.position = dest;
         playerBody.linearVelocity = Vector2.zero; //nolin sisa momentum
+        playerMove.Face(point.Facing); //nongolin mc sesuai keluarnya dia 
         cam.OnTargetObjectWarped(playerBody.transform, delta); //kamera loncat
     }
 
@@ -59,16 +63,29 @@ public class SceneTransitionManager : MonoBehaviour
 
     private void PlacePlayer(Scene target, string spawnId)
     {
-        foreach (SpawnPoint point in FindObjectsByType<SpawnPoint>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        SceneContext ctx = FindContext(target);
+        if (ctx == null)
         {
-            if (point.gameObject.scene != target) continue;
-            if (point.SpawnId != spawnId) continue;
-
-            PlaceAt(point);
+            Debug.LogError($"[Trnasition] scene {target.name} ga punya SceneContext");
             return;
         }
 
-        Debug.LogError($"[Transition] spawn '{spawnId}' ga ketemeu di scene {target.name}");
+        SpawnPoint point = ctx.FindSpawn(spawnId);
+        if (point == null)
+        {
+            Debug.LogError($"[Transition] spawn '{spawnId}' ga ketemeu di scene {target.name}");
+            return;
+        }
+        PlaceAt(point, ctx.FloorY);
+    }
+
+    private SceneContext FindContext(Scene target)
+    {
+        foreach (SceneContext ctx in FindObjectsByType<SceneContext>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            if (ctx.gameObject.scene == target) return ctx;
+        }
+        return null;
     }
 
     private IEnumerator Fade(float to)

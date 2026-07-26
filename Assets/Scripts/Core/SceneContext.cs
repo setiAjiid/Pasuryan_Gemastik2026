@@ -6,7 +6,10 @@ public class SceneContext : MonoBehaviour
 {
     //main task: nyamabungin isi scene ke subsitem abadi
     [SerializeField] private Collider2D cameraBounds;
+    [SerializeField] private float floorY; //garis jalan ruangan ini, semua yg mendarat di sini pake Y ini
     [SerializeField] private SpawnPoint defaultSpawn; //dipk klo scene ini diplay langsung dari editor, bukn lewat pintu
+
+    public float FloorY => floorY;
 
     private void Awake()
     {
@@ -23,6 +26,17 @@ public class SceneContext : MonoBehaviour
 
         ApplyCameraBounds(root);
         ApplyDefaultSpawn(root);
+    }
+
+    public SpawnPoint FindSpawn(string spawnId)
+    {
+        foreach (SpawnPoint point in FindObjectsByType<SpawnPoint>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            if (point.gameObject.scene != gameObject.scene) continue;
+            if (point.SpawnId != spawnId) continue;
+            return point;
+        }
+        return null;
     }
 
     //kek template di c++, nyapu satu tipe obj di suatu scene ini doang, then jalanin aksi bindnya
@@ -47,6 +61,15 @@ public class SceneContext : MonoBehaviour
     {
         if (defaultSpawn == null) return;
         if (root.Transition.IsBusy) return; //lagi transisi lewat pintu
-        root.Transition.PlaceAt(defaultSpawn);
+        root.Transition.PlaceAt(defaultSpawn, floorY);
+    }
+
+    //garis kuning selebar batas cam, biar garis jalannya kelihatan di scene view
+    private void OnDrawGizmos()
+    {
+        if (cameraBounds == null) return;
+        Gizmos.color = Color.yellow;
+        Bounds area = cameraBounds.bounds;
+        Gizmos.DrawLine(new Vector3(area.min.x, floorY, 0f), new Vector3(area.max.x, floorY, 0f));
     }
 }

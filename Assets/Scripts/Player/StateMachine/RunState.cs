@@ -10,7 +10,7 @@ public class RunState : IState
 
     public void Enter()
     {
-        ctx.Animator.SetInteger("AnimState", 1);
+        ctx.Animator.SetInteger("AnimState", 4);
     }
 
     public void Exit()

@@ -3,14 +3,16 @@ public class DialogueLine
     //main task: container buat nyimpen line yg udah dipisah ama tagsnya
     public string Text { get; }
     public string Speaker { get; }
+    public DialogueMode Mode { get; }
     public int MHDelta { get; }
     public int TensiDelta { get; }
     public int EnergyDelta { get; }
 
-    public DialogueLine (string text, string speaker, int mhDelta, int tensiDelta, int energyDelta)
+    public DialogueLine (string text, string speaker, DialogueMode mode, int mhDelta, int tensiDelta, int energyDelta)
     {
         Text = text;
         Speaker = speaker;
+        Mode = mode;
         MHDelta = mhDelta;
         TensiDelta = tensiDelta;
         EnergyDelta = energyDelta;

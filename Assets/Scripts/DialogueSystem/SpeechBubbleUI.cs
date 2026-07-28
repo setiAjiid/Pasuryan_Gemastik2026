@@ -1,9 +1,9 @@
 using TMPro;
 using UnityEngine;
 
-public class SpeechBubbleUI : MonoBehaviour
+public class SpeechBubbleUI : MonoBehaviour, IDialogueView
 {
-    //show and hide the bubble wrapper, and set the text that send from DialogueManager
+    //main task: show and hide the bubble wrapper, and set the text that send from DialogueManager
     [SerializeField] private GameObject bubble;
     [SerializeField] private TextMeshProUGUI dialogue;
 
@@ -12,7 +12,7 @@ public class SpeechBubbleUI : MonoBehaviour
         Hide();
     }
 
-    public void Show(string text)
+    public void Show(string speaker, string text) //speaker sengaja diabaikan cz bubble udah nempel di orangnya
     {
         bubble.SetActive(true);
         dialogue.text = text;

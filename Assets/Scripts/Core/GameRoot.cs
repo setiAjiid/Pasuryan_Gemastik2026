@@ -12,6 +12,9 @@ public class GameRoot : MonoBehaviour
     [SerializeField] private CinemachineConfiner2D confiner;
     [SerializeField] private SceneTransitionManager transition;
 
+    [Header("Speaker Abadi")]
+    [SerializeField] private DialogueSpeaker[] persistentSpeaker; //surya, dll
+
     private static GameRoot instance;
     public static GameRoot Instance => instance;
     public PlayerInputReader InputReader => inputReader;
@@ -45,6 +48,11 @@ public class GameRoot : MonoBehaviour
             return;
         }
         instance = this;
+
+        foreach(DialogueSpeaker speaker in persistentSpeaker)
+        {
+            dialogue.RegSpeaker(speaker);
+        }
     }
 
 

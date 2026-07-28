@@ -8,6 +8,8 @@ public static class TagParser
     {
         string speaker = null;
         int mh = 0, tensi = 0, energy = 0;
+        DialogueMode mode = DialogueMode.Bubble; //defaultnya orang ngomong biasa
+
         if (rawTags != null)
         {
             foreach (string tag in rawTags)
@@ -19,6 +21,9 @@ public static class TagParser
                 string val = tag[(sep + 1)..].Trim();
                 switch (key)
                 {
+                    case "mode":
+                        mode = ParseMode(val);
+                        break;
                     case "speaker":
                         speaker = val;
                         break;
@@ -35,7 +40,7 @@ public static class TagParser
                 }
             }
         }
-        return new DialogueLine(text, speaker, mh, tensi, energy);
+        return new DialogueLine(text, speaker, mode, mh, tensi, energy);
     } 
 
     private static int ParseInt (string val, string key)
@@ -47,6 +52,22 @@ public static class TagParser
         {
             Debug.LogWarning($"[Tag Parser] value tag of '{key}' bukan angka wok: '{val}'");
             return 0;
+        }
+    }
+
+    private static DialogueMode ParseMode (string val)
+    {
+        switch (val.ToLower())
+        {
+            case "bubble":
+                return DialogueMode.Bubble;
+            case "narasi":
+            case "batin":
+            case "monolog":
+                return DialogueMode.Narration;
+            default:
+                Debug.LogWarning($"[Tag Parser] mode '{val}' ga dikenali wok, so pake bubble");
+                return DialogueMode.Bubble;
         }
     }
 }

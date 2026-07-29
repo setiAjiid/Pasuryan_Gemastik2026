@@ -7,8 +7,10 @@ public class PlayerInputReader : MonoBehaviour
     public bool IsRun { get; private set; }
 
     public event System.Action OnInteractPressed;
+    public event System.Action<int> OnNavigatePressed;
 
     private InputSystem_Actions controls;
+    private int lastNavDir; //track last pencetan biar ga geser terus
 
 
     private void Awake()
@@ -24,6 +26,7 @@ public class PlayerInputReader : MonoBehaviour
         controls.Player.Sprint.performed += OnRun;
         controls.Player.Sprint.canceled += OnRun;
         controls.Player.Interact.performed += OnInteract;
+        controls.UI.Navigate.performed += OnNavigate;
     }
 
     private void OnDisable()
@@ -33,6 +36,7 @@ public class PlayerInputReader : MonoBehaviour
         controls.Player.Sprint.performed -= OnRun;
         controls.Player.Sprint.canceled -= OnRun;
         controls.Player.Interact.performed -= OnInteract;
+        controls.UI.Navigate.performed -= OnNavigate;
         controls.Player.Disable();
     }
 
@@ -51,6 +55,23 @@ public class PlayerInputReader : MonoBehaviour
         OnInteractPressed?.Invoke();
     }
 
+    private void OnNavigate(InputAction.CallbackContext ctx)
+    {
+        Vector2 val = ctx.ReadValue<Vector2>();
+        int dir = 0;
+        if (val.x > 0.5f) dir = 1;
+        else if (val.x < -0.5f) dir = -1;
+
+        if (dir == lastNavDir) return;
+        lastNavDir = dir;
+        if (dir != 0) OnNavigatePressed?.Invoke(dir);
+    }
+    public void EnableMove()
+    {
+        controls.Player.Move.Enable();
+        controls.Player.Sprint.Enable();
+    }
+
     public void DisableMove()
     {
         controls.Player.Move.Disable();
@@ -59,9 +80,16 @@ public class PlayerInputReader : MonoBehaviour
         IsRun = false;
     }
 
-    public void EnableMove()
+
+    public void EnableNavigate()
     {
-        controls.Player.Move.Enable();
-        controls.Player.Sprint.Enable();
+        lastNavDir = 0;
+        controls.UI.Navigate.Enable();
+    }
+
+    public void DisableNavigate()
+    {
+        controls.UI.Navigate.Disable();
+        lastNavDir = 0;
     }
 }

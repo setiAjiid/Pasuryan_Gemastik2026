@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
     [SerializeField] private float typeSpeed = 0.03f;
     [SerializeField] private BatinState batin;
     [SerializeField] private NarrationBoxUI narration;
+    [SerializeField] private ChoiceSelectorUI choices;
 
     private readonly Dictionary<string, DialogueSpeaker> speakers = new();
     private Story story;
@@ -20,6 +21,7 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
     private string activeSpeaker;
     private string currLine;
     private bool isTyping = false;
+    private bool isChoosing = false;
 
     public bool IsDialogueActive { get; private set; }
 
@@ -37,8 +39,15 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
     //dicall PlayerInteractor tiep E dipencet slama sesi ini aktif
     public void OnContinue()
     {
-        if (isTyping) InstantFinishTyp();
+        if (isChoosing) ChooseCurrent();
+        else if (isTyping) InstantFinishTyp();
         else DisplayLine();
+    }
+
+    public void OnNavigate(int dir)
+    {
+        if (!isChoosing) return;
+        choices.MoveIndex(dir);
     }
 
     //case baru mulai dialog, dicall dr DialogueTrigger.Interact()
@@ -66,7 +75,37 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
                 return;
             } 
         }
+
+        if (story.currentChoices.Count > 0)
+        {
+            ShowChoices();
+            return;
+        }
         EndDialogue();
+    }
+
+    private void ShowChoices()
+    {
+        isChoosing = true;
+        List<string> labels = new();
+        foreach (Choice choice in story.currentChoices)
+        {
+            labels.Add(choice.text);
+        }
+        choices.Show(labels);
+        input.EnableNavigate();
+    }
+
+
+    private void ChooseCurrent()
+    {
+        int picked = choices.Idx;
+        isChoosing = false;
+        choices.Hide();
+        input.DisableNavigate();
+
+        story.ChooseChoiceIndex(picked); //ink lanjut dari cabang yg dipilih
+        DisplayLine();
     }
 
     //nentuin korak mana yg dipake, tutup kotak lama klo pembicara ganti

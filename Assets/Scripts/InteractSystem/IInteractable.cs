@@ -13,4 +13,5 @@ public interface IInteractable
 public interface IInteractionSession
 {
     void OnContinue(); //func yg dicall PlayerInteractor slama E dipencet or jalan 
+    void OnNavigate(int dir); //geser pilihan kanan or kiri (-1 or 1);
 }

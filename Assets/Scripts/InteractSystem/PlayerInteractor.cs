@@ -14,11 +14,13 @@ public class PlayerInteractor : MonoBehaviour
     private void OnEnable()
     {
         input.OnInteractPressed += HandlePress;
+        input.OnNavigatePressed += HandleNavigate;
     }
 
     private void OnDisable()
     {
         input.OnInteractPressed -= HandlePress;
+        input.OnNavigatePressed -= HandleNavigate;
     }
 
     private void Update()
@@ -59,6 +61,11 @@ public class PlayerInteractor : MonoBehaviour
         }
 
         if (IsAlive(curr) && curr.CanInteract) curr.Interact();
+    }
+
+    private void HandleNavigate(int dir)
+    {
+        activeSession?.OnNavigate(dir);
     }
 
     private void RefreshPrompt()

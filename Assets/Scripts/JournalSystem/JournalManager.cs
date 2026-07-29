@@ -10,4 +10,9 @@ public class JournalManager : MonoBehaviour, IInteractionSession
     {
         throw new System.NotImplementedException();
     }
+
+    public void OnNavigate(int dir)
+    {
+        throw new System.NotImplementedException();
+    }
 }

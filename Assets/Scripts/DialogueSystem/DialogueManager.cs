@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
     [SerializeField] private ChoiceSelectorUI choices;
 
     private readonly Dictionary<string, DialogueSpeaker> speakers = new();
+    private readonly Dictionary<string, Story> stories = new(); //story hidup trus
+
     private Story story;
     private Coroutine typCoroutine;
     private IDialogueView activeView;
@@ -51,14 +53,27 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
     }
 
     //case baru mulai dialog, dicall dr DialogueTrigger.Interact()
-    public void StartDialogue(TextAsset inkJson)
+    public void StartDialogue(TextAsset inkJson, string entryKnot)
     {
         if (IsDialogueActive) return;
-        story = new Story(inkJson.text);
+        story = GetStory(inkJson);
+        if (!string.IsNullOrEmpty(entryKnot)) story.ChoosePathString(entryKnot);
+
         IsDialogueActive = true;
         input.DisableMove();
         interactor.BeginSession(this);
         DisplayLine();
+    }
+
+    private Story GetStory(TextAsset inkJson)
+    {
+        string key = inkJson.name;
+        if (!stories.TryGetValue(key, out Story fnd))
+        {
+            fnd = new Story(inkJson.text);
+            stories[key] = fnd;
+        }
+        return fnd;
     }
 
     private void DisplayLine()

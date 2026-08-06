@@ -7,6 +7,7 @@ public class DialogueTrigger : InteractableBase
     //npc pasif cuman ngasih data dan laporin jarak ke PlayerInteractor, sediain data dialog
 
     [SerializeField] private TextAsset text;
+    [SerializeField] private string entryKnot = "dispatch";
     
     private DialogueManager dialogueManager;
 
@@ -19,6 +20,6 @@ public class DialogueTrigger : InteractableBase
     }
     public override void Interact()
     {
-        dialogueManager.StartDialogue(text);
+        dialogueManager.StartDialogue(text, entryKnot);
     }
 }

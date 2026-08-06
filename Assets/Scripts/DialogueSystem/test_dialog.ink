@@ -1,13 +1,23 @@
--> mulai
+VAR beat = 0
 
-=== mulai ===
+-> dispatch
+
+=== dispatch ===
+{
+    - beat == 0: -> perkenalan
+    - beat == 1: -> ajakan_nongkrong
+    - else: -> basa_basi
+}
+
+=== perkenalan ===
 Ruang tamu masih sepi. Cuma ada suara jam dinding. # speaker: Naratif # mode: narasi
 Halo, anak baru! Selamat datang di kampung. # speaker: brama
 Bahu gue tiba-tiba berat. # speaker: Surya # mode: batin # tensi: 20
-Wah, mukamu tegang banget. Ada apa? # speaker: brama
 Nggak apa-apa kok, Pak. # speaker: surya
-Bohong. # speaker: Surya # mode: batin # mh: -10
-Yaudah sana, hati-hati di jalan. # speaker: brama # mh: 10
+~ beat = 1
+-> DONE
+
+=== ajakan_nongkrong ===
 Eh Sur, ntar sore ikut nongkrong ga? # speaker: brama
 * [Ikut aja lah]
     Boleh, gue ikut. # speaker: surya
@@ -18,4 +28,9 @@ Eh Sur, ntar sore ikut nongkrong ga? # speaker: brama
 * [Diam aja]
     ... # speaker: surya # tensi: 15
 - Yaudah, kabarin aja ya. # speaker: brama
--> END
+~ beat = 2
+-> DONE
+
+=== basa_basi ===
+Hati-hati di jalan ya, Sur. # speaker: brama
+-> DONE

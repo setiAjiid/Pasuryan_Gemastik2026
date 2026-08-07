@@ -37,8 +37,10 @@ public class SceneTransitionManager : MonoBehaviour
 
         playerBody.position = dest;
         playerBody.linearVelocity = Vector2.zero; //nolin sisa momentum
+        Physics2D.SyncTransforms(); //rb.pos baru nyentuh transform pas fixdupate, di sisi lain cinemachine bacanya tu transfrom
         playerMove.Face(point.Facing); //nongolin mc sesuai keluarnya dia 
         cam.OnTargetObjectWarped(playerBody.transform, delta); //kamera loncat
+        cam.PreviousStateIsValid = false; //batalin dampling, so dia bakal mendarat langsung, bukan mlh meluncur
     }
 
     private IEnumerator Move(string sceneName, string spawnId)

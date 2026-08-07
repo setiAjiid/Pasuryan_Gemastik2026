@@ -44,14 +44,17 @@ TagManager:
   - name: Land
     uniqueID: 2499982625
     locked: 0
-  - name: UI
-    uniqueID: 1313547265
-    locked: 0
   - name: Char
     uniqueID: 3628312061
     locked: 0
+  - name: UI
+    uniqueID: 1313547265
+    locked: 0
   - name: FrontProps
     uniqueID: 839436201
+    locked: 0
+  - name: Minigames
+    uniqueID: 2147591421
     locked: 0
   m_RenderingLayers:
   - Default

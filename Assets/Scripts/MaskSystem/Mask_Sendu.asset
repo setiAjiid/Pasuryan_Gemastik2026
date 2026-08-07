@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   displayName: Sendu
-  icon: {fileID: 0}
+  icon: {fileID: -6727066795695917160, guid: ed9c8482b98548c419f3ee21d3affb9a, type: 3}
   energyCost: 15
   note: 

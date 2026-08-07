@@ -7,9 +7,18 @@ public class CrisisManager : MonoBehaviour
 
     [SerializeField] private PlayerInputReader input;
     [SerializeField] private BatinState batin;
+    [SerializeField] private float tensiDropPerSec = 2.8f; //tensi turun slama bener
 
     [Header("Mekanik Krisis")]
     [SerializeField] private List<CrisisResolver> resolvers = new();
+
+    [Header("Tekanan Krisi")]
+    [SerializeField] private float mhLeakPerSec = 0.5f;
+    [SerializeField] private int mhFloor = 10; //dibawah ini krisisiny dinyatakan gagal
+
+    private CrisisResolver active;
+    private float leakCarry; //nampung pecahan cz CalcStat cuman terima int
+    private float dropCarry;
 
     public bool IsCrisisActive { get; private set; }
 
@@ -22,6 +31,35 @@ public class CrisisManager : MonoBehaviour
     {
         batin.OnTensiMax -= HandleTensiMaxed;
     }
+
+    private void LateUpdate()
+    {
+        if (!IsCrisisActive) return;
+
+        //mh bocor perlahan slama krisis
+        leakCarry += mhLeakPerSec * Time.deltaTime;
+        if (leakCarry >= 1f)
+        {
+            int drop = Mathf.FloorToInt(leakCarry);
+            leakCarry -= drop;
+            batin.CalcStat(-drop, 0, 0);
+        }
+
+        //tensi mereda
+        if (active.IsOnTrack)
+        {
+            dropCarry += tensiDropPerSec * Time.deltaTime;
+            if (dropCarry >= 1f)
+            {
+                int down = Mathf.FloorToInt(dropCarry);
+                dropCarry -= down;
+                batin.CalcStat(0, 0, -down);
+            }
+        }
+
+        if (batin.MHVal <= mhFloor) active.Abort(); //kehabisan napas
+    }
+
 
     private void HandleTensiMaxed()
     {
@@ -38,9 +76,11 @@ public class CrisisManager : MonoBehaviour
         input.DisableMove();
 
         //random minigame as resolver (tentatif)
+        leakCarry = 0f;
+        dropCarry = 0f;
         int randIdx = Random.Range(0, resolvers.Count);
-        CrisisResolver chosenResolver = resolvers[randIdx];
-        chosenResolver.Resolve(EndCrisis);
+        active = resolvers[randIdx];
+        active.Resolve(EndCrisis);
     }
 
     private void EndCrisis(CrisisResult res)

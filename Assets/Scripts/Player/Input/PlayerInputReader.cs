@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputReader : MonoBehaviour
 {
     public Vector2 MoveInput { get; private set; }
+    public Vector2 NavigateInput { get; private set; } //nilai mentah wasd for minigames
     public bool IsRun { get; private set; }
 
     public event System.Action OnInteractPressed;
@@ -58,6 +59,8 @@ public class PlayerInputReader : MonoBehaviour
     private void OnNavigate(InputAction.CallbackContext ctx)
     {
         Vector2 val = ctx.ReadValue<Vector2>();
+        NavigateInput = val;
+
         int dir = 0;
         if (val.x > 0.5f) dir = 1;
         else if (val.x < -0.5f) dir = -1;
@@ -90,6 +93,7 @@ public class PlayerInputReader : MonoBehaviour
     public void DisableNavigate()
     {
         controls.UI.Navigate.Disable();
+        NavigateInput = Vector2.zero;
         lastNavDir = 0;
     }
 }

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   displayName: Bijak
-  icon: {fileID: 0}
+  icon: {fileID: -5751871928970012655, guid: 4f1f51caef057c84ba4ed5e701f2630e, type: 3}
   energyCost: 20
   note: 

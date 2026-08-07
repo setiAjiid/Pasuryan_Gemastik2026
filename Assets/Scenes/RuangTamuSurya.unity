@@ -518,6 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptIcon: {fileID: 604014452}
   text: {fileID: 4900000, guid: a0c7d57724381c54e945f5037623b5ca, type: 3}
+  entryKnot: dispatch
 --- !u!61 &627905749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -810,7 +811,7 @@ MonoBehaviour:
   m_Intensity: 2.74
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 0000000021b5029501244b4efda543d8a9c70832
+  m_ApplyToSortingLayers: 0000000021b5029501244b4efda543d8a9c70832fda40180
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

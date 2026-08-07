@@ -14,4 +14,7 @@ public abstract class CrisisResolver : MonoBehaviour
 
     //kalo dah selesai perlu panggil fungsi endCrisis pk delegate
     public abstract void Resolve(Action<CrisisResult> OnDone);
+    public abstract void Abort();
+
+    public virtual bool IsOnTrack => true;
 }

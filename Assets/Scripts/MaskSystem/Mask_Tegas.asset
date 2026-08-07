@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   displayName: Tegas
-  icon: {fileID: 0}
+  icon: {fileID: -4341225290135231220, guid: ae121b5cc3d1f6146acd0d1715b98fbd, type: 3}
   energyCost: 15
   note: 

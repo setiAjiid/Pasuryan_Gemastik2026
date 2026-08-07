@@ -8,6 +8,7 @@ public static class TagParser
     {
         string speaker = null;
         int mh = 0, tensi = 0, energy = 0;
+        bool jagatLakon = false;
         DialogueMode mode = DialogueMode.Bubble; //defaultnya orang ngomong biasa
 
         if (rawTags != null)
@@ -15,10 +16,10 @@ public static class TagParser
             foreach (string tag in rawTags)
             {
                 int sep = tag.IndexOf(':');
-                if (sep < 0) continue; //which is no tag atau -1
 
-                string key = tag[..sep].Trim().ToLower();
-                string val = tag[(sep + 1)..].Trim();
+                //tag tanpa ":" berarti itu bisa aja tag bendera, misal "# jagatlakon", klo tagnya ":" brarti tag ada isian
+                string key = (sep < 0 ? tag : tag[..sep]).Trim().ToLower();
+                string val = (sep < 0) ? "" : tag[(sep + 1)..].Trim();
                 switch (key)
                 {
                     case "mode":
@@ -36,11 +37,14 @@ public static class TagParser
                     case "tensi":
                         tensi = ParseInt(val, key);
                         break;
+                    case "jagatlakon":
+                        jagatLakon = true;
+                        break;
                     //tag2 lain (sfx, anim, agenda, dll) blom dihandle
                 }
             }
         }
-        return new DialogueLine(text, speaker, mode, mh, tensi, energy);
+        return new DialogueLine(text, speaker, mode, mh, tensi, energy, jagatLakon);
     } 
 
     private static int ParseInt (string val, string key)

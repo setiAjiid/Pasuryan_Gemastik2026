@@ -4,36 +4,39 @@ using UnityEngine;
 
 public class MaskSelectorUI : MonoBehaviour
 {
-    //main task: ngasih daftar pilihan horizon + nandai yg kepilih (without seeing isinya pilihan dialog/topeng)
+    //main task:
+    //tampilin 3 topeng aktif + tandai yg kepilih, yg ga bisa dipake ttp kerender cuman beku
     [SerializeField] private GameObject panel;
-    [SerializeField] private TextMeshProUGUI[] slots;
-    [SerializeField] private Color idleColor = Color.gray;
-    [SerializeField] private Color pickedColor = Color.white;
+    [SerializeField] private MaskSlotUI[] slots;
 
+    private readonly List<bool> selectable = new();
     private int cnt;
     private int idx;
 
     public int Idx => idx;
+    public bool IsPickable => cnt > 0 && selectable[idx];
+
     private void Awake()
     {
         Hide();
     }
 
-    public void Show(List<string> labels)
+    public void Show(List<MaskDefinition> defs, List<bool> canPick)
     {
-        if (labels.Count > slots.Length)
+        if (defs.Count > slots.Length)
         {
-            Debug.LogWarning($"[Choice] pilihan ada {labels.Count} tp slot cuman {slots.Length}, sisanya ga kelihatan", this);
+            Debug.LogWarning($"[Mask] topeng ada {defs.Count} tp slot cuman {slots.Length}, sisanya ga kelihatan", this);
         }
+        cnt = Mathf.Min(defs.Count, slots.Length);
 
-        cnt = Mathf.Min(labels.Count, slots.Length);
+        selectable.Clear();
+        selectable.AddRange(canPick);
         for (int i =  0; i < slots.Length; i++)
         {
-            bool used = i < cnt;
-            slots[i].gameObject.SetActive(used);
-            if (used) slots[i].text = labels[i];
+            if (i < cnt) slots[i].Bind(defs[i], canPick[i]);
+            else slots[i].gameObject.SetActive(false);
         }
-        idx = 0;
+        idx = FirstSelectable();
         panel.SetActive(true);
         Repaint();
     }
@@ -50,11 +53,21 @@ public class MaskSelectorUI : MonoBehaviour
         panel.SetActive(false);
     }
 
+    //mulai dari topeng pertama yg beneran kepake aka ga beku
+    private int FirstSelectable()
+    {
+        for(int i = 0; i < cnt; i++)
+        {
+            if (selectable[i]) return i;
+        }
+        return 0;
+    }
+
     private void Repaint()
     {
         for (int i = 0; i < cnt; i++)
         {
-            slots[i].color = (i == idx) ? pickedColor : idleColor;
+            slots[i].SetPicked(i == idx);
         }
     }
 

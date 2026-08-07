@@ -13,10 +13,16 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
     [SerializeField] private BatinState batin;
     [SerializeField] private NarrationBoxUI narration;
     [SerializeField] private ChoiceSelectorUI choices;
+    [SerializeField] private MaskSelectorUI masks;
+    [SerializeField] private MaskInventory inventory;
 
     private readonly Dictionary<string, DialogueSpeaker> speakers = new();
     private readonly Dictionary<string, Story> stories = new(); //story hidup trus
+    private readonly List<MaskDefinition> maskDefs = new(); //topeng per slot, urutane ikut invent
+    private readonly List<int> maskChoiceIdx = new(); //slot itu nomor choice di ink, misal klo -1 itu artinya adegan ini g punya percabangan
 
+    private bool isMasking = false;
+    private bool pendingJagatLakon = false;
     private Story story;
     private Coroutine typCoroutine;
     private IDialogueView activeView;
@@ -41,15 +47,16 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
     //dicall PlayerInteractor tiep E dipencet slama sesi ini aktif
     public void OnContinue()
     {
-        if (isChoosing) ChooseCurrent();
+        if (isMasking) ChooseMask();
+        else if (isChoosing) ChooseCurrent();
         else if (isTyping) InstantFinishTyp();
         else DisplayLine();
     }
 
     public void OnNavigate(int dir)
     {
-        if (!isChoosing) return;
-        choices.MoveIndex(dir);
+        if (isMasking) masks.MoveIndex(dir);
+        else if (isChoosing) choices.MoveIndex(dir);
     }
 
     //case baru mulai dialog, dicall dr DialogueTrigger.Interact()
@@ -83,20 +90,79 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
             string text = story.Continue().Trim();
             DialogueLine line = TagParser.Parse(text, story.currentTags); //jadiin line bersih, textnya sendiri, tagsnya sendiri
             ApplyTags(line); //apply efek samping
+            if (line.IsJagatLakon) pendingJagatLakon = true; //nyala sekarang, dan bakal kepake pas di choices
             
             if (!line.IsTagOnly)
             {
                 ShowLine(line);
                 return;
             } 
+
         }
 
         if (story.currentChoices.Count > 0)
         {
-            ShowChoices();
+            if (pendingJagatLakon) ShowMasks();
+            else ShowChoices();
             return;
         }
         EndDialogue();
+    }
+
+    private void ShowMasks()
+    {
+        pendingJagatLakon = false;
+        isMasking = true;
+
+        maskDefs.Clear();
+        maskChoiceIdx.Clear();
+        List<bool> canPick = new();
+        foreach(MaskType type in inventory.Equipped)
+        {
+            MaskDefinition def = inventory.GetDef(type);
+            if (def == null)
+            {
+                Debug.LogWarning($"[Mask] '{type}' ga ada definitionnya di MaskInventory");
+                continue;
+            }
+
+            int inkIdx = FindChoice(def.InkId);
+
+            //3 sebab yg berbeda, tapi 1 tampilan sama, yakni adagean g punya caban/blom kebuka/energy kurang
+            bool ok = inkIdx >= 0 && inventory.IsUnlocked(type) && batin.EnergyVal >= def.EnergyCost;
+
+            maskDefs.Add(def);
+            maskChoiceIdx.Add(inkIdx);
+            canPick.Add(ok);
+
+        }
+
+        masks.Show(maskDefs, canPick);
+        input.EnableNavigate();
+    }
+
+    //nyocokin id topeng ke teks pilihan ink, mis "* [tenang]"
+    private int FindChoice (string inkId)
+    {
+        for (int i = 0; i < story.currentChoices.Count; i++)
+        {
+            if (story.currentChoices[i].text.Trim().ToLower() == inkId) return i;
+        }
+        return -1;
+    }
+
+    private void ChooseMask()
+    {
+        if (!masks.IsPickable) return;  //lagi nyorot topeng beku, skip
+        MaskDefinition def = maskDefs[masks.Idx];
+        int inkIdx = maskChoiceIdx[masks.Idx];
+
+        isMasking = false;
+        masks.Hide();
+        input.DisableNavigate();
+        batin.CalcStat(0, -def.EnergyCost, 0); //bayar dlu, baru kalimatnya kekunci
+        story.ChooseChoiceIndex(inkIdx);
+        DisplayLine();
     }
 
     private void ShowChoices()
@@ -193,6 +259,9 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
     private void EndDialogue()
     {
         IsDialogueActive = false;
+        isMasking = false;
+        isChoosing = false;
+        pendingJagatLakon = false;
         activeView?.Hide();
         activeView = null;
         activeSpeaker = null;

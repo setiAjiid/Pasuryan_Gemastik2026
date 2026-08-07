@@ -6,6 +6,7 @@ VAR beat = 0
 {
     - beat == 0: -> perkenalan
     - beat == 1: -> ajakan_nongkrong
+    - beat == 2: -> konflik_brama
     - else: -> basa_basi
 }
 
@@ -29,6 +30,19 @@ Eh Sur, ntar sore ikut nongkrong ga? # speaker: brama
     ... # speaker: surya # tensi: 15
 - Yaudah, kabarin aja ya. # speaker: brama
 ~ beat = 2
+-> DONE
+
+=== konflik_brama ===
+Eh, muka lo kenapa sih dari tadi? # speaker: brama
+Dada gue mulai panas. # speaker: Surya # mode: batin # tensi: 15 # jagatlakon
+* [tenang]
+    Gue... oke kok. Cuma butuh napas bentar. # speaker: surya # tensi: -20
+    Brama ngangguk pelan. Ga maksa. # speaker: Naratif # mode: narasi
+* [tegas]
+    Bisa ga sih lo ga usah ikut campur? # speaker: surya # mh: -10
+    Brama diem. Suasananya jadi kaku. # speaker: Naratif # mode: narasi
+- Bel masuk bunyi. # speaker: Naratif # mode: narasi
+~ beat = 3
 -> DONE
 
 === basa_basi ===

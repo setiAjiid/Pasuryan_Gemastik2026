@@ -7,8 +7,9 @@ public class DialogueLine
     public int MHDelta { get; }
     public int TensiDelta { get; }
     public int EnergyDelta { get; }
+    public bool IsJagatLakon { get; } 
 
-    public DialogueLine (string text, string speaker, DialogueMode mode, int mhDelta, int tensiDelta, int energyDelta)
+    public DialogueLine (string text, string speaker, DialogueMode mode, int mhDelta, int tensiDelta, int energyDelta, bool isJagatLakon)
     {
         Text = text;
         Speaker = speaker;
@@ -16,6 +17,7 @@ public class DialogueLine
         MHDelta = mhDelta;
         TensiDelta = tensiDelta;
         EnergyDelta = energyDelta;
+        IsJagatLakon = isJagatLakon;
     }
 
     //for security/debug purpose

@@ -10,6 +10,7 @@ public static class TagParser
         int mh = 0, tensi = 0, energy = 0;
         bool jagatLakon = false;
         DialogueMode mode = DialogueMode.Bubble; //defaultnya orang ngomong biasa
+        
 
         if (rawTags != null)
         {

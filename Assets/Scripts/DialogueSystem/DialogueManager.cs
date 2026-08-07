@@ -111,6 +111,7 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
 
     private void ShowMasks()
     {
+        HideActiveView();
         pendingJagatLakon = false;
         isMasking = true;
 
@@ -141,6 +142,12 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
         input.EnableNavigate();
     }
 
+    private void HideActiveView()
+    {
+        activeView?.Hide();
+        activeView = null;
+    }
+
     //nyocokin id topeng ke teks pilihan ink, mis "* [tenang]"
     private int FindChoice (string inkId)
     {
@@ -167,6 +174,7 @@ public class DialogueManager : MonoBehaviour, IInteractionSession
 
     private void ShowChoices()
     {
+        HideActiveView();
         isChoosing = true;
         List<string> labels = new();
         foreach (Choice choice in story.currentChoices)

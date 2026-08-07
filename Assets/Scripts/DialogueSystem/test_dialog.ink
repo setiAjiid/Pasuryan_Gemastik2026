@@ -36,11 +36,17 @@ Eh Sur, ntar sore ikut nongkrong ga? # speaker: brama
 Eh, muka lo kenapa sih dari tadi? # speaker: brama
 Dada gue mulai panas. # speaker: Surya # mode: batin # tensi: 15 # jagatlakon
 * [tenang]
-    Gue... oke kok. Cuma butuh napas bentar. # speaker: surya # tensi: -20
-    Brama ngangguk pelan. Ga maksa. # speaker: Naratif # mode: narasi
+    Napas gue tarik pelan-pelan. # speaker: Surya # mode: batin
+    ** Gue oke kok. Cuma butuh napas bentar. # speaker: surya
+    ** Tenang, gue nggak apa-apa. Beneran. # speaker: surya
+    ** Nggak usah khawatir, gue cuma capek. # speaker: surya
+    -- Brama ngangguk pelan. Ga maksa. # speaker: Naratif # mode: narasi # tensi: -20
 * [tegas]
-    Bisa ga sih lo ga usah ikut campur? # speaker: surya # mh: -10
-    Brama diem. Suasananya jadi kaku. # speaker: Naratif # mode: narasi
+    Ada yang naik sampai tenggorokan. # speaker: Surya # mode: batin
+    ** Bisa ga sih lo ga usah ikut campur? # speaker: surya
+    ** Urus aja urusan lo sendiri. # speaker: surya
+    ** Berisik. Gue lagi males. # speaker: surya
+    -- Brama diem. Suasananya jadi kaku. # speaker: Naratif # mode: narasi # mh: -10
 - Bel masuk bunyi. # speaker: Naratif # mode: narasi
 ~ beat = 3
 -> DONE

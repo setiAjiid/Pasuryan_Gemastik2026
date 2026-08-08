@@ -17,4 +17,5 @@ public abstract class CrisisResolver : MonoBehaviour
     public abstract void Abort();
 
     public virtual bool IsOnTrack => true;
+    public virtual bool IsAvailable => true;
 }

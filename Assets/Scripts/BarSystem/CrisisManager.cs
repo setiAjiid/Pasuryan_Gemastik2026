@@ -20,6 +20,8 @@ public class CrisisManager : MonoBehaviour
     private float leakCarry; //nampung pecahan cz CalcStat cuman terima int
     private float dropCarry;
 
+    private readonly List<CrisisResolver> ready = new(); // yg lagi layak dipake
+
     public bool IsCrisisActive { get; private set; }
 
     private void OnEnable()
@@ -65,21 +67,36 @@ public class CrisisManager : MonoBehaviour
     {
         if (IsCrisisActive) return;
 
-        if (resolvers.Count == 0)
+        ready.Clear();
+        foreach(CrisisResolver r in resolvers)
+        {
+            if (r != null && r.IsAvailable) ready.Add(r);
+        }
+
+        if (ready.Count == 0)
         {
             Debug.LogWarning("[Crisis] Tension mentok tapi blom ada resolver, so skip it");
             batin.ResetTensiExploded();
             return;
         }
 
+        Begin(ready[Random.Range(0, ready.Count)]);
+    }
+    
+    public void ForceCrisis(CrisisResolver res)
+    {
+        if (IsCrisisActive || res == null) return;
+        Begin(res);
+    }
+
+    private void Begin(CrisisResolver res)
+    {
         IsCrisisActive = true;
         input.DisableMove();
 
-        //random minigame as resolver (tentatif)
         leakCarry = 0f;
         dropCarry = 0f;
-        int randIdx = Random.Range(0, resolvers.Count);
-        active = resolvers[randIdx];
+        active = res;
         active.Resolve(EndCrisis);
     }
 

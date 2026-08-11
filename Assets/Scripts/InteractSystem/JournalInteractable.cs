@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class JournalInteractable : InteractableBase
 {
-    [SerializeField] private JournalManager journal;
+    private JournalManager journal; //diisi scenecontext
 
-    //public override bool CanInteract => journal.HasFragments; //syarat pra-jurnal
+    public override bool CanInteract => journal != null && journal.CanOpen;
+
+
+    public void BindJournal(JournalManager tar)
+    {
+        journal = tar;
+    }
 
     public override void Interact()
     {

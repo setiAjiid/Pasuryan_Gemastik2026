@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: d143985f9ad011d4ebbd7e330b2f4ad7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1470240212135267022
+    second: TILEMAP - UI DESIGN - DIARY_0
+  - first:
+      213: 7742645799111757694
+    second: TILEMAP - UI DESIGN - DIARY_1
+  - first:
+      213: -4893370229300968076
+    second: TILEMAP - UI DESIGN - DIARY_2
+  - first:
+      213: 708513004907610758
+    second: TILEMAP - UI DESIGN - DIARY_3
+  - first:
+      213: -8544201022305993479
+    second: TILEMAP - UI DESIGN - DIARY_4
+  - first:
+      213: -8366574137409498966
+    second: TILEMAP - UI DESIGN - DIARY_5
+  - first:
+      213: 8740600262184210100
+    second: TILEMAP - UI DESIGN - DIARY_6
+  - first:
+      213: -2886478846263041025
+    second: TILEMAP - UI DESIGN - DIARY_7
+  - first:
+      213: 803985990524512883
+    second: TILEMAP - UI DESIGN - DIARY_8
+  - first:
+      213: -428195941616453195
+    second: TILEMAP - UI DESIGN - DIARY_9
+  - first:
+      213: 1328233669551491748
+    second: TILEMAP - UI DESIGN - DIARY_10
+  - first:
+      213: -2157590613811330607
+    second: TILEMAP - UI DESIGN - DIARY_11
+  - first:
+      213: -3449484255735710458
+    second: TILEMAP - UI DESIGN - DIARY_12
+  - first:
+      213: -8709214930154037989
+    second: TILEMAP - UI DESIGN - DIARY_13
+  - first:
+      213: 1534496139752379883
+    second: TILEMAP - UI DESIGN - DIARY_14
+  - first:
+      213: -6446225262855092258
+    second: TILEMAP - UI DESIGN - DIARY_15
+  - first:
+      213: 1440557635075921739
+    second: TILEMAP - UI DESIGN - DIARY_16
+  - first:
+      213: 7770229537262351861
+    second: TILEMAP - UI DESIGN - DIARY_17
+  - first:
+      213: -1708988932798197971
+    second: TILEMAP - UI DESIGN - DIARY_18
+  - first:
+      213: 1167474694875792772
+    second: TILEMAP - UI DESIGN - DIARY_19
+  - first:
+      213: 1239146724284922218
+    second: TILEMAP - UI DESIGN - DIARY_20
+  - first:
+      213: 8580383691927333985
+    second: TILEMAP - UI DESIGN - DIARY_21
+  - first:
+      213: 3169869090957928810
+    second: TILEMAP - UI DESIGN - DIARY_22
+  - first:
+      213: 6685432440946138816
+    second: TILEMAP - UI DESIGN - DIARY_23
+  - first:
+      213: -5250654809627223345
+    second: TILEMAP - UI DESIGN - DIARY_24
+  - first:
+      213: -6390868414104841047
+    second: TILEMAP - UI DESIGN - DIARY_25
+  - first:
+      213: 4011153610776687762
+    second: TILEMAP - UI DESIGN - DIARY_26
+  - first:
+      213: 7751684453774534410
+    second: TILEMAP - UI DESIGN - DIARY_27
+  - first:
+      213: -9016146736979038944
+    second: TILEMAP - UI DESIGN - DIARY_28
+  - first:
+      213: -6480662485383890475
+    second: TILEMAP - UI DESIGN - DIARY_29
+  - first:
+      213: -3181371660945110789
+    second: TILEMAP - UI DESIGN - DIARY_30
+  - first:
+      213: 2606095557386603233
+    second: TILEMAP - UI DESIGN - DIARY_31
+  - first:
+      213: -4341920288548374888
+    second: TILEMAP - UI DESIGN - DIARY_32
+  - first:
+      213: -2955652841648429288
+    second: TILEMAP - UI DESIGN - DIARY_33
+  - first:
+      213: 5196277973656527615
+    second: TILEMAP - UI DESIGN - DIARY_34
+  - first:
+      213: 5526771790974691917
+    second: TILEMAP - UI DESIGN - DIARY_35
+  - first:
+      213: -5979413213775557838
+    second: TILEMAP - UI DESIGN - DIARY_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: InventarisBg
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 582
+        width: 482
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235be251158a89be0800000000000000
+      internalID: -1470240212135267022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clickedIconKoleksi
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 820
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f0abdf457637b60800000000000000
+      internalID: 7742645799111757694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP - UI DESIGN - DIARY_2
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 788
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4754b00e3b1471cb0800000000000000
+      internalID: -4893370229300968076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clickedIconAgenda
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 788
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6824348f2d425d900800000000000000
+      internalID: 708513004907610758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BukuSudahTerbukaLeftNRightPageBergarisKosong
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 642
+        width: 266
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcfbe77076ec6980800000000000000
+      internalID: -8544201022305993479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clickedIconDiary
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 756
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa09cb86625f3eb80800000000000000
+      internalID: -8366574137409498966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clickedIconObservatory
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 756
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be0d27f0a9dc4970800000000000000
+      internalID: 8740600262184210100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CenterClickedNextLefIcon
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 724
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3efc458ca21f7d0800000000000000
+      internalID: -2886478846263041025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CenterUnclickedNextLeftIcon
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 724
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37aaa99aff4582b00800000000000000
+      internalID: 803985990524512883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CenterUnclickedNextRightIcon
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 724
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9ffad4f0ebe0af0800000000000000
+      internalID: -428195941616453195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CenterClickedNextRightIcon
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 724
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa84543c75de6210800000000000000
+      internalID: 1328233669551491748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CheckedAgendaIcon
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 696
+        width: 85
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d10f05a4c2be02e0800000000000000
+      internalID: -2157590613811330607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnchekedBoxAgenda
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60df1967858f020d0800000000000000
+      internalID: -3449484255735710458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoneIcon
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 644
+        width: 62
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1dd3a71a27a22780800000000000000
+      internalID: -8709214930154037989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TopIconJagatLakon
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 612
+        width: 82
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be51627eb10ab4510800000000000000
+      internalID: 1534496139752379883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextOfIconDiary
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 612
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed78f59e6486a86a0800000000000000
+      internalID: -6446225262855092258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextOfIconObservatory
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 612
+        width: 82
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b475d256983edf310800000000000000
+      internalID: 1440557635075921739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextOfIconAgenda
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 612
+        width: 54
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f535cf789665db60800000000000000
+      internalID: 7770229537262351861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TopIconItems
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 612
+        width: 51
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f4d77ce937848e0800000000000000
+      internalID: -1708988932798197971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconDayKe
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 612
+        width: 82
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4854458ac04b33010800000000000000
+      internalID: 1167474694875792772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextOfIconKoleksi
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 580
+        width: 61
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6977956165523110800000000000000
+      internalID: 1239146724284922218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnclickedIconKoleksi
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 516
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c22e9c185a31770800000000000000
+      internalID: 8580383691927333985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LembarForObservatory
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 398
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69a90fb423adfb20800000000000000
+      internalID: 3169869090957928810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PageKosongKertasBergaris
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 398
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce9774526d67cc50800000000000000
+      internalID: 6685432440946138816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PageAgenda
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 397
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca19f1154de127b0800000000000000
+      internalID: -5250654809627223345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PageKosongKertasTidakBergaris
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 397
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a45403a9031f47a0800000000000000
+      internalID: -6390868414104841047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nothing1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 484
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294beddf4fa7aa730800000000000000
+      internalID: 4011153610776687762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unclickedIconAgenda
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 484
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a072626c0f3839b60800000000000000
+      internalID: 7751684453774534410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteBoxFilled
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 471
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d2193ff4630e280800000000000000
+      internalID: -9016146736979038944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreyBoxUnfilled
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 471
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d93e793ecf0016a0800000000000000
+      internalID: -6480662485383890475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unclickedIconDiary
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 452
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf84fda745f79d3d0800000000000000
+      internalID: -3181371660945110789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unclickedIconObservatory
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 452
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea80cc0a16ba2420800000000000000
+      internalID: 2606095557386603233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LembarForKoleksi
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 209
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896330680866eb3c0800000000000000
+      internalID: -4341920288548374888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LembarForItems
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 209
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817eb2676696bf6d0800000000000000
+      internalID: -2955652841648429288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PageKosongKertasBergaris2
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 209
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2ebf53943ec1840800000000000000
+      internalID: 5196277973656527615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PageDiary
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 210
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a22bb69a903bc40800000000000000
+      internalID: 5526771790974691917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP - UI DESIGN - DIARY_36
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 210
+        width: 134
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b81a3cc5bd40da0800000000000000
+      internalID: -5979413213775557838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4eeac6300212881409f04e9d41a61f18
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BukuSudahTerbukaLeftNRightPageBergarisKosong: -8544201022305993479
+      CenterClickedNextLefIcon: -2886478846263041025
+      CenterClickedNextRightIcon: 1328233669551491748
+      CenterUnclickedNextLeftIcon: 803985990524512883
+      CenterUnclickedNextRightIcon: -428195941616453195
+      CheckedAgendaIcon: -2157590613811330607
+      DoneIcon: -8709214930154037989
+      GreyBoxUnfilled: -6480662485383890475
+      IconDayKe: 1167474694875792772
+      InventarisBg: -1470240212135267022
+      LembarForItems: -2955652841648429288
+      LembarForKoleksi: -4341920288548374888
+      LembarForObservatory: 3169869090957928810
+      PageAgenda: -5250654809627223345
+      PageDiary: 5526771790974691917
+      PageKosongKertasBergaris: 6685432440946138816
+      PageKosongKertasBergaris2: 5196277973656527615
+      PageKosongKertasTidakBergaris: -6390868414104841047
+      TILEMAP - UI DESIGN - DIARY_2: -4893370229300968076
+      TILEMAP - UI DESIGN - DIARY_36: -5979413213775557838
+      TextOfIconAgenda: 7770229537262351861
+      TextOfIconDiary: -6446225262855092258
+      TextOfIconKoleksi: 1239146724284922218
+      TextOfIconObservatory: 1440557635075921739
+      TopIconItems: -1708988932798197971
+      TopIconJagatLakon: 1534496139752379883
+      UnchekedBoxAgenda: -3449484255735710458
+      UnclickedIconKoleksi: 8580383691927333985
+      WhiteBoxFilled: -9016146736979038944
+      clickedIconAgenda: 708513004907610758
+      clickedIconDiary: -8366574137409498966
+      clickedIconKoleksi: 7742645799111757694
+      clickedIconObservatory: 8740600262184210100
+      nothing1: 4011153610776687762
+      unclickedIconAgenda: 7751684453774534410
+      unclickedIconDiary: -3181371660945110789
+      unclickedIconObservatory: 2606095557386603233
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

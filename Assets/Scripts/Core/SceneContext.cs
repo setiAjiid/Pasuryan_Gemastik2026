@@ -24,6 +24,7 @@ public class SceneContext : MonoBehaviour
         BindAll<DialogueTrigger>(tar => tar.BindDialogue(root.Dialogue));
         BindAll<DialogueSpeaker>(tar => tar.BindDialogue(root.Dialogue));
         BindAll<DoorInteractable>(tar => tar.BindTransition(root.Transition));
+        BindAll<JournalInteractable>(tar => tar.BindJournal(root.Journal));
 
         ApplyCameraBounds(root);
         ApplyDefaultSpawn(root);

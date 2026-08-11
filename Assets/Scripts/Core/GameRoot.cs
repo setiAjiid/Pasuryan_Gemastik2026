@@ -11,6 +11,7 @@ public class GameRoot : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private CinemachineConfiner2D confiner;
     [SerializeField] private SceneTransitionManager transition;
+    [SerializeField] private JournalManager journal;
 
     [Header("Speaker Abadi")]
     [SerializeField] private DialogueSpeaker[] persistentSpeaker; //surya, dll
@@ -23,6 +24,7 @@ public class GameRoot : MonoBehaviour
     public Transform Player => player;
     public CinemachineConfiner2D Confiner => confiner;
     public SceneTransitionManager Transition => transition;
+    public JournalManager Journal => journal;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Bootstrap()

@@ -44,6 +44,9 @@ TagManager:
   - name: Land
     uniqueID: 2499982625
     locked: 0
+  - name: InteractSys
+    uniqueID: 2866555711
+    locked: 0
   - name: Char
     uniqueID: 3628312061
     locked: 0

@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 65a2e19b88ac6b043a8a6c914ae2334b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3802907906635415195
+    second: frontProps_TempatDuduk_KORIDOR SEKOLAH_0
+  - first:
+      213: 7843077500755264425
+    second: frontProps_TempatDuduk_KORIDOR SEKOLAH_1
+  - first:
+      213: -7301241306623934237
+    second: frontProps_TempatDuduk_KORIDOR SEKOLAH_2
+  - first:
+      213: 66390432814325650
+    second: frontProps_TempatDuduk_KORIDOR SEKOLAH_3
+  - first:
+      213: 3075699001935637959
+    second: frontProps_TempatDuduk_KORIDOR SEKOLAH_4
+  - first:
+      213: -3319276909084047429
+    second: frontProps_TempatDuduk_KORIDOR SEKOLAH_5
+  - first:
+      213: -9202202578184291026
+    second: frontProps_TempatDuduk_KORIDOR SEKOLAH_6
+  - first:
+      213: -4337598925019284780
+    second: frontProps_TempatDuduk_KORIDOR SEKOLAH_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: frontProps_TempatDuduk_KORIDOR SEKOLAH_0
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 202
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e3788a794a6c430800000000000000
+      internalID: 3802907906635415195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontProps_TempatDuduk_KORIDOR SEKOLAH_1
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 202
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3406abe6538dc60800000000000000
+      internalID: 7843077500755264425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontProps_TempatDuduk_KORIDOR SEKOLAH_2
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 202
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0854b17b7ccaa90800000000000000
+      internalID: -7301241306623934237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontProps_TempatDuduk_KORIDOR SEKOLAH_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 179
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fd1643fbddbe000800000000000000
+      internalID: 66390432814325650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontProps_TempatDuduk_KORIDOR SEKOLAH_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 179
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cda56e42f31faa20800000000000000
+      internalID: 3075699001935637959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontProps_TempatDuduk_KORIDOR SEKOLAH_5
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 179
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb783eacc3f8fe1d0800000000000000
+      internalID: -3319276909084047429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontProps_TempatDuduk_KORIDOR SEKOLAH_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 179
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d3420b2853b4080800000000000000
+      internalID: -9202202578184291026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frontProps_TempatDuduk_KORIDOR SEKOLAH_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1099
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dafb1062c0cdc3c0800000000000000
+      internalID: -4337598925019284780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      frontProps_TempatDuduk_KORIDOR SEKOLAH_0: 3802907906635415195
+      frontProps_TempatDuduk_KORIDOR SEKOLAH_1: 7843077500755264425
+      frontProps_TempatDuduk_KORIDOR SEKOLAH_2: -7301241306623934237
+      frontProps_TempatDuduk_KORIDOR SEKOLAH_3: 66390432814325650
+      frontProps_TempatDuduk_KORIDOR SEKOLAH_4: 3075699001935637959
+      frontProps_TempatDuduk_KORIDOR SEKOLAH_5: -3319276909084047429
+      frontProps_TempatDuduk_KORIDOR SEKOLAH_6: -9202202578184291026
+      frontProps_TempatDuduk_KORIDOR SEKOLAH_7: -4337598925019284780
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

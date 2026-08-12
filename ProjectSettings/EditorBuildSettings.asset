@@ -14,6 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RuangTamuSurya.unity
     guid: efe95059c909e6847b42c5d46ad4f54d
+  - enabled: 1
+    path: Assets/Scenes/OutdoorRumahSuryaDanJalanan.unity
+    guid: e50fa244aa9ff324e95887964388931f
+  - enabled: 1
+    path: Assets/Scenes/KoridorSekolah.unity
+    guid: 5d31d182b049383499c38f4475b721b3
+  - enabled: 1
+    path: Assets/Scenes/RuangKelasSurya.unity
+    guid: 8f43f4e500b77cd41b9762debbcf4b6b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -1148,7 +1148,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09, y: 0.93499994}
+  m_Offset: {x: -0.16338098, y: 0.93499994}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.6451613, y: -0.05325444}
@@ -1158,7 +1158,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.337908, y: 1.69}
+  m_Size: {x: 1.4846699, y: 1.69}
   m_EdgeRadius: 0
 --- !u!1 &1365612365
 GameObject:
@@ -1901,6 +1901,10 @@ PrefabInstance:
       propertyPath: targetSpawnId
       value: dariOutdoorSekolah
       objectReference: {fileID: 0}
+    - target: {fileID: 4401907743826502279, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.508
+      objectReference: {fileID: 0}
     - target: {fileID: 7067932485607918958, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -1911,7 +1915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853627130795614262, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.02
+      value: 7.491
       objectReference: {fileID: 0}
     - target: {fileID: 8853627130795614262, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1951,11 +1955,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084869373260982528, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
       propertyPath: m_Size.x
-      value: 1.1648611
+      value: 1.4374185
       objectReference: {fileID: 0}
     - target: {fileID: 9084869373260982528, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
       propertyPath: m_Offset.x
-      value: 0.041369915
+      value: -0.11063409
       objectReference: {fileID: 0}
     - target: {fileID: 9084869373260982528, guid: c8a692b1f10293b48b58c3ff0d19af28, type: 3}
       propertyPath: m_IsTrigger

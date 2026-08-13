@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Diary_Day1
   m_EditorClassIdentifier: 
   day: 1
-  title: MyKisah - 13 Jan 2020
+  title: Masalah Badai - 13 Jan 2020
   inkJson: {fileID: 4900000, guid: c4523861c364dd148aca783ad4f809e2, type: 3}
   entryKnot: day1

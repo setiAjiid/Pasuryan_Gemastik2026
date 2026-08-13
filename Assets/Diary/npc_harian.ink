@@ -1,7 +1,7 @@
 === satpam ===
 {&
-    - Halo, selamat pagi. # speaker: satpam
-      Pagi, Pak. # speaker: surya
+    - Kamu kok pucet gitu? Sakit? # speaker: satpam
+      Gapapa kok, Pak. # speaker: surya
     - Ada yang bisa dibantu? # speaker: satpam
       Nggak, Pak. Makasih. # speaker: surya
     - Selamat pagi lagi. # speaker: satpam
@@ -11,21 +11,45 @@
 
 === darsono ===
 {&
-    - Topeng itu bukan buat sembunyi, Nak. # speaker: darsono
+    - Tanganmu gemeteran, Nak. # speaker: darsono
+      Gapapa, Pak. # speaker: surya
+    - Topeng itu bukan buat sembunyi. # speaker: darsono
       Terus buat apa, Pak? # speaker: surya
-    - Kayu yang bagus itu justru yang mau retak. # speaker: darsono
-      Saya nggak ngerti. # speaker: surya
     - Mampir lagi kalau tanganmu lagi nganggur. # speaker: darsono
       Iya, Pak. # speaker: surya
 }
 -> DONE
 
+=== ayah ===
+{&
+    - Kamu kenapa? # speaker: ayah
+      Gapapa. # speaker: surya
+    - Udah makan? # speaker: ayah
+      Udah. # speaker: surya
+    - Ayah pulang telat lagi nanti. # speaker: ayah
+      Iya, Yah. # speaker: surya
+}
+-> DONE
+
 === laras ===
 {&
+    - -> capek
     - -> hari_pertama
     - -> betah
-    - -> capek
 }
+
+= capek
+Kamu keliatan capek. Baik-baik aja? # speaker: laras
++ [Jujur]
+    Kurang tidur, Kak. # speaker: surya
+    Jangan dipaksa. Mampir PMR kalau pusing. # speaker: laras
++ [Aman]
+    Gapapa kok, Kak. # speaker: surya
+    Ya udah. Tapi jangan dipaksain. # speaker: laras
++ [Balik nanya]
+    Kelihatan banget ya? # speaker: surya
+    Banget. Muka kamu jujur banget, Sur. # speaker: laras
+- -> DONE
 
 = hari_pertama
 Eh, anak baru! Gimana hari pertamamu? # speaker: laras
@@ -52,27 +76,3 @@ Masih betah di sini? # speaker: laras
     Kakak betah? # speaker: surya
     Sekarang iya. Dulu enggak. # speaker: laras
 - -> DONE
-
-= capek
-Kamu keliatan capek. Baik-baik aja? # speaker: laras
-+ [Jujur]
-    Kurang tidur, Kak. # speaker: surya
-    Jangan dipaksa. Mampir PMR kalau pusing. # speaker: laras
-+ [Aman]
-    Baik kok. # speaker: surya
-    Ya udah. Tapi jangan dipaksain. # speaker: laras
-+ [Balik nanya]
-    Kelihatan banget ya? # speaker: surya
-    Banget. Muka kamu jujur banget, Sur. # speaker: laras
-- -> DONE
-
-=== ayah ===
-{&
-    - Udah makan? # speaker: ayah
-      Udah. # speaker: surya
-    - Ayah pulang telat lagi nanti. # speaker: ayah
-      Iya. # speaker: surya
-    - Lampunya jangan lupa dimatiin. # speaker: ayah
-      Iya, Yah. # speaker: surya
-}
--> DONE
